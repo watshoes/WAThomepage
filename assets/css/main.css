@@ -1889,7 +1889,7 @@
 		transition: border-color 0.2s ease;
 		background-color: transparent;
 		border: solid 1px !important;
-		border-color: rgba(255, 255, 255, 0.15) !important;
+		border-color: rgba(255, 255, 255, 0.55) !important;
 		border-radius: 3em;
 		color: #000000 !important; <!-- -->
 		cursor: pointer;
