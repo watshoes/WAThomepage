@@ -5,8 +5,10 @@ app = Flask(__name__, static_url_path='')
 
 @app.route("/",methods=["POST","GET"])
 def index():
-    if 'gender' in request.form:
-        sheet.add_values(request.form)
+    if request.method == "POST":
+        if 'gender' in request.form:
+            sheet.add_values(request.form)
+            return "{} added".format(request.form["name1"])
     return render_template("index.html")
 @app.route("/images/<path:path>")
 def send_images(path):
