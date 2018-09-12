@@ -2,3 +2,4 @@ bin/
 include/
 .Python
 lib/
+__pycache__/
