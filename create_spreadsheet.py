@@ -5,7 +5,7 @@ class Spreadsheet(object):
     entries = {}
     count = 1
     def add_values(self,values):
-        with open("beta_testers.txt",'w+') as data:
+        with open("beta_testers.txt",'a+') as data:
             entry = values['name1'], values['email1'],values['gender'],values['FavoriteShoe']
             entries[count] = entry
             data.write("\nentry {}: {}".format(count,entry))
