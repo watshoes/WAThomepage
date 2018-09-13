@@ -8,7 +8,7 @@ class Spreadsheet(object):
         with open("beta_testers.txt",'w+') as data:
             entry = values['name1'], values['email1'],values['gender'],values['FavoriteShoe']
             self.entries[self.count] = entry
-            data.write("\nentry {}: {}".format(self.count,entry))
+            data.write("\nentry {}: {}".format(self.count,entries[self.count]))
             self.count += 1
             print(data.read())
             s3.meta.client.upload_file('beta_testers.txt', 'visionprocessing', 'beta_testers.txt')
