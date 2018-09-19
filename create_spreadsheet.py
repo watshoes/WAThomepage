@@ -30,7 +30,7 @@ class Spreadsheet(object):
 
         # The A1 notation of a range to search for a logical table of data.
         # Values will be appended after the last row of the table.
-        range_ = 'Sheet1!A1:B2:C3:D4'  # TODO: Update placeholder value.
+        range_ = 'Sheet1!A1:D4'  # TODO: Update placeholder value.
 
         # How the input data should be interpreted.
         value_input_option = 'RAW'  # TODO: Update placeholder value.
