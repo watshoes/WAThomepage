@@ -8,7 +8,7 @@ from google.auth.transport.requests import Request
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
-class gmailConnector():
+class GmailConnector():
     def create_message(self,sender, to, subject, message_text):
       """Create a message for an email.
 

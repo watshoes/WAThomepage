@@ -1,7 +1,8 @@
 from flask import Flask, render_template, url_for, send_from_directory, request
 from create_spreadsheet import Spreadsheet
+from gmailConnector import GmailConnector
 #sheet = Spreadsheet()
-goog = gmailConnector()
+goog = GmailConnector()
 app = Flask(__name__, static_url_path='')
 
 @app.route("/",methods=["POST","GET"])
