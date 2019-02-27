@@ -63,4 +63,4 @@ class GmailConnector():
 # goog = GmailConnector()
 # msg = goog.create_message("seanbrhn3@gmail.com","sean@watshoes.co","test bitch","just a test and shit")
 # serv = goog.service()
-# goog.send_message(serv,"seanbrhn3",msg)
+# goog.send_message(serv,"me",msg)
