@@ -60,7 +60,7 @@ class GmailConnector():
             return message
         except errors.HttpError as error:
             print('An error occurred: %s' % error)
-# goog = GmailConnector()
-# msg = goog.create_message("seanbrhn3@gmail.com","sean@watshoes.co","test bitch","just a test and shit")
-# serv = goog.service()
-# goog.send_message(serv,"me",msg)
+goog = GmailConnector()
+msg = goog.create_message("sean@watshoes.co","sean@watshoes.co","test bitch","just a test and shit")
+serv = goog.service()
+goog.send_message(serv,"me",msg)
