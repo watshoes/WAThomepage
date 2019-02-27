@@ -8,7 +8,6 @@ app = Flask(__name__, static_url_path='')
 @app.route("/",methods=["POST","GET"])
 def index():
     if request.method == "POST":
-        print(request.form)
         message = goog.create_message(request.form['email'],'sean@watshoes.co',request.form['name']+ " sending from website",request.form['message'])
         serv = goog.serv()
         goog.send_message(serv,"sean",message)
