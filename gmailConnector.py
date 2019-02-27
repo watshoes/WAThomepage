@@ -4,7 +4,7 @@ import os.path
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
-
+import email.mime
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
@@ -21,7 +21,7 @@ class GmailConnector():
       Returns:
         An object containing a base64url encoded email object.
       """
-      message = MIMEText(message_text)
+      message = email.mime.text.MIMEText(message_text)
       message['to'] = to
       message['from'] = sender
       message['subject'] = subject
