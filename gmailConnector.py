@@ -4,7 +4,9 @@ import os.path
 from googleapiclient.discovery import build
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
-import email.mime
+import email.mime.text
+import base64
+from apiclient import errors, discovery
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
@@ -25,7 +27,7 @@ class GmailConnector():
       message['to'] = to
       message['from'] = sender
       message['subject'] = subject
-      return {'raw': base64.urlsafe_b64encode(message.as_string())}
+      return {'raw': base64.urlsafe_b64encode(message.as_bytes()).decode()}
 
     def service(self):
       creds = None
@@ -56,5 +58,9 @@ class GmailConnector():
                        .execute())
             print('Message Id: %s' % message['id'])
             return message
-        except(errors.HttpError, error):
+        except errors.HttpError as error:
             print('An error occurred: %s' % error)
+# goog = GmailConnector()
+# msg = goog.create_message("seanbrhn3@gmail.com","sean@watshoes.co","test bitch","just a test and shit")
+# serv = goog.service()
+# goog.send_message(serv,"seanbrhn3",msg)
