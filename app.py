@@ -10,7 +10,7 @@ def index():
     if request.method == "POST":
         message = goog.create_message(request.form['email'],'sean@watshoes.co',request.form['name']+ " sending from website",request.form['message'])
         serv = goog.service()
-        
+
         goog.send_message(serv,"me",message)
 
     return render_template("index.html")
