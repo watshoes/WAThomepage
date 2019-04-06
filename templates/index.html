@@ -18,7 +18,12 @@ mixpanel.init("16238fc384e8fa5031eb1064bc4552ef");</script><!-- end Mixpanel -->
 	</head>
 	<body>
 	<script>
-		mixpanel.track("Video play");
+		mixpanel.track("appLink");
+		mixpanel.track_links("#intro","Intro selected");
+		mixpanel.track_links("#one","firs link");
+		mixpanel.track_links("#two","second link");
+		mixpanel.track_links("#three","third link");
+		mixpanel.track_links("appLink","link to app");
 	</script>
 		<!-- Sidebar -->
 			<section id="sidebar">
@@ -45,7 +50,7 @@ mixpanel.init("16238fc384e8fa5031eb1064bc4552ef");</script><!-- end Mixpanel -->
 							<p>Quick and easy shoes scanning application WAT<br />
 							and released for free under the Creative Commons.
 						</p>
-						<h3>Try our <b>BETA:</b><a href="https://testflight.apple.com/join/d40d9eSO" style="color:blue;">IPhone download</a></h3>
+						<h3>Try our <b>BETA:</b><a href="https://testflight.apple.com/join/d40d9eSO" name="appLink"style="color:blue;">IPhone download</a></h3>
 							<ul class="actions">
 								<!--<li><a href="#one" class="button scrolly" style="color: white;">Learn more</a></li>-->
 							</ul>
