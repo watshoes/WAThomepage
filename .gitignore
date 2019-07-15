@@ -3,3 +3,4 @@ include/
 .Python
 lib/
 __pycache__/
+.idea/
