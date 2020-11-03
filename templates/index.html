@@ -6,15 +6,11 @@
 		<title>WAT</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!-- start Mixpanel --><script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,
-0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" ");
-for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?
-MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn4.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]);
-mixpanel.init("16238fc384e8fa5031eb1064bc4552ef");</script><!-- end Mixpanel -->
+		<script
+		src="http://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+		crossorigin="anonymous"></script>
 	</head>
 	<body>
 
@@ -134,33 +130,21 @@ mixpanel.init("16238fc384e8fa5031eb1064bc4552ef");</script><!-- end Mixpanel -->
 							<h2>Get in touch</h2>
 							<div class="split style1">
 								<section>
-									<form method="post" action="https://wat-homepage.herokuapp.com/">
-										<div class="field half first">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
+									<form method="post" action="/"
+										enctype="multipart/form-data">
 										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="5"></textarea>
+											<label for="message">Wanna Test it out?!</label>
+											<input type="file" name="shoe_upload">
 										</div>
 										<ul class="actions">
 											<!-- <li><a href="mailto:watshoes@gmail.com" class="button submit">Send Message</a></li> -->
 											<input type="submit">
 										</ul>
 									</form>
+									<div>Answer: {{answer_shoe}}</div>
 								</section>
 								<section>
 									<ul class="contact">
-										<li>
-											<!-- <h3>Address</h3>
-											<span>12345 Somewhere Road #654<br />
-											Nashville, TN 00000-0000<br />
-											USA</span> -->
-										</li>
 										<li>
 											<h3>Email</h3>
 											<a href="mailto:watshoes@gmail.com">watshoes@gmail.com</a>
@@ -181,40 +165,6 @@ mixpanel.init("16238fc384e8fa5031eb1064bc4552ef");</script><!-- end Mixpanel -->
 							</div>
 						</div>
 					</section>
-
-					<!--Four -->
-					<!-- <section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Beta Testers!</h2>
-							<p>We are looking for people to test out our application if you are interested<br>
-							please sign up!</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="https://wat-homepage.herokuapp.com/">
-										<div class="field half first">
-											<label for="email1">Email</label>
-											<input type="email" name="email1" id="email1" />
-										</div>
-										<div class="field half">
- 										 <label for="name1">Name</label>
- 										 <input type="text" name="name1" id="name1" />
- 									 </div>
-									 <div class="field">
- 										<label for="gender">Gender</label>
- 										<input type="text" name="gender" id="gender" />
- 									</div>
-									<div class="field">
-										<label for="FavoriteShoe">Favorite Brand</label>
-										<input type="text" name="FavoriteShoe" id="FavoriteShoe" />
-									</div>
-									 <button type="submit" class="button submit">Submit</button>
-			 				 	</form>
-								</section>
-							</div>
-						</div>
-					</section>
-					<!-- Finished -- >
-			</div> -->
 
 		<!-- Footer -->
 			<footer id="footer" class="wrapper style1-alt">
